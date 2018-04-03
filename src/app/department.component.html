@@ -1,0 +1,59 @@
+   
+        <div class="col-lg-4 col-sm-12">
+          <div class="form-group">
+            <label>
+              <strong>Responsibility Code Hirearchy</strong>
+            </label>
+            <ngx-treeview [config]="config" [items]="items" (onEditRespCode)="editResponsibilityCode($event)" (selectedChange)="values = $event">
+            </ngx-treeview>
+          </div>
+          
+        </div>
+        <div class="row">
+          <div class="container">
+                  <!-- <h2>Modal Example</h2> -->
+                  <!-- Trigger the modal with a button -->
+                  <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+                
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Edit Approval Group</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                  <div class="col-md-4">
+                                      <label>Department:</label>
+                                          <!-- <input type="text" name="txtDept" disabled [(ngModel)]="dept"> -->
+                                          <input type="text" name="txtDept" [(ngModel)]="department" disabled >
+                                  </div>
+                                  <div class="col-md-4">
+                                      <label> DFR:</label>
+                                          <input type="text" name="txtDfr"  [(ngModel)]="dfr"> </div>
+                                          <!-- <input type="text" name="txtDfr"  value="DFR EmployeeName"> </div> -->
+                                  <div class="col-md-4"> 
+                                          <label> LCFO:</label>
+                                          <!-- <input type="text" name="txtLcfo"  [(ngModel)]="lcfo">  -->
+                                          <input type="text" name="txtLcfo"  value="LCFO EmployeeName"> 
+                                  </div>
+                            </div>                     
+                        
+                        </div>
+                        
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+  </div>
+  
